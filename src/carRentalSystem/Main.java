@@ -1,7 +1,6 @@
 package carRentalSystem;
 import java.util.*;
-import java.io.*;
-import java.time.*;
+
 public class Main {
 
 	public static void print(){
@@ -114,12 +113,12 @@ public class Main {
 				currentSystem.delCustomer(id);
 			}
 			else if(choice==10){
-				System.out.println("Now the service will be shutting off");
+				System.out.println("Now the service will shut off");
 				break;
 			}
 			
 			
-			System.out.println("Please make another choice\n");
+			System.out.println("\nPlease make another choice\n");
 		}
 		System.out.println("System stopped.");
 		scan.close(); 

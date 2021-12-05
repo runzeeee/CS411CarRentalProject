@@ -152,16 +152,22 @@ public class rentalSystem {
 			if(c!=null) {
 				if(c.getCarId().equals(content)) {
 					c = null;
+					System.out.println("Deleted!\n");
+					printCarList();
 					return true;
 				}
 				if(c.getCarName().equals(content)) {
 					c = null;
+					System.out.println("Deleted!\n");
+					printCarList();
 					return true;
 				}
+			System.out.println("Fail!\n");
 			}
 		}
 		return false;
 	}
+	
 	/**
 	 * delete the customer from customer list
 	 * @param content

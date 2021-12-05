@@ -36,5 +36,7 @@ public class tests{
 	      currentSystem.rentACar(David, "Mercedes");
 	      System.out.println("Current RentalBook: ");
 	      currentSystem.rentalBook.printRentalBook();
+		  currentSystem.delCar("001");
+		  currentSystem.printCarList();
 	    }
 	}
