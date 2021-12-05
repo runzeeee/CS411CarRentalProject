@@ -52,15 +52,14 @@ public class Main {
 				System.out.print(carid + " " + carname + " is successfully added to the carlist\n");
 			}
 			if (choice==2){
-				String test = "111";
 				System.out.print("\nPlease enter the user's information:\n");
 				System.out.print("\nName:\n");
 				String name = scan.next();
 				System.out.print("\nPhone Number:\n");
 				String phoneNumber = scan.next();
-				System.out.print("\nSet your personal ID:\n");
+				System.out.print("Set your personal ID:");
 				String id = scan.next();
-				System.out.print("\nNow please enter your payment information:\n");
+				System.out.print("Now please enter your payment information:\n");
 				System.out.print("\nBank Name:\n");
 				String bankName = scan.next();
 				System.out.print("\nAccount Number:\n");
@@ -71,7 +70,10 @@ public class Main {
 				customer newcustomer = new customer(name, phoneNumber, id, paymentInfo);
 				currentSystem.addCustomer(newcustomer);
 				System.out.print(newcustomer.getId() + " " + name + " is successfully added to the customer list\n");
-				System.out.print(currentSystem.verifyCustomerById(test));
+				System.out.println();
+				System.out.print(currentSystem.verifyCustomerById("111"));
+				System.out.println();
+
 			}
 			if (choice==3){
 				System.out.print("\nPlease enter the user's ID:\n");
