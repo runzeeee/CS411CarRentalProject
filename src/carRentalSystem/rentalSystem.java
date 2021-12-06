@@ -164,8 +164,8 @@ public class rentalSystem {
 				}
 			
 			}
-		System.out.println("Fail!\n");
-		}
+		
+		}System.out.println("Fail!\n");
 		return false;
 	}
 	
@@ -199,8 +199,10 @@ public class rentalSystem {
 					printCustomerList();
 					return true;
 				}
-			}System.out.println("Failed!\n");
+			}
+			
 		}
+		System.out.println("Failed!\n");
 		return false;
 	}
 	public String getCustomerNameByInfo(String content) throws IllegalArgumentException{
