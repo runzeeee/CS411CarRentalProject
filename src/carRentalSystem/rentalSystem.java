@@ -150,18 +150,25 @@ public class rentalSystem {
 		}
 		for(int i=0;i<carList.length;i++) {
 			if(carList[i]!=null) {
-				if(carList[i].getCarId()==content) {
+				if(carList[i].getCarId().equals(content)) {
 					carList[i] = null;
+					System.out.println("Deleted!\n");
+					printCarList();
 					return true;
 				}
-				if(carList[i].getCarName()==content) {
+				if(carList[i].getCarName().equals(content)) {
 					carList[i] = null;
+					System.out.println("Deleted!\n");
+					printCarList();
 					return true;
 				}
+			
 			}
+		System.out.println("Fail!\n");
 		}
 		return false;
 	}
+	
 	/**
 	 * delete the customer from customer list
 	 * @param content
@@ -174,19 +181,25 @@ public class rentalSystem {
 		}
 		for(int i=0;i<customerList.length;i++) {
 			if(customerList[i]!=null) {
-				if(customerList[i].getName()==content) {
+				if(customerList[i].getName().equals(content)) {
 					customerList[i] = null;
+					System.out.println("Deleted!\n");
+					printCustomerList();
 					return true;
 				}
-				if(customerList[i].getId()==content) {
+				if(customerList[i].getId().equals(content)) {
 					customerList[i] = null;
+					System.out.println("Deleted!\n");
+					printCustomerList();
 					return true;
 				}
-				if(customerList[i].getPhoneNumber()==content) {
+				if(customerList[i].getPhoneNumber().equals(content)) {
 					customerList[i] = null;
+					System.out.println("Deleted!\n");
+					printCustomerList();
 					return true;
 				}
-			}
+			}System.out.println("Failed!\n");
 		}
 		return false;
 	}
@@ -194,13 +207,13 @@ public class rentalSystem {
 		if(content==null) throw new IllegalArgumentException("input cannot be null");
 		for(int i=0;i<customerList.length;i++) {
 			if(customerList[i]!=null) {
-				if(customerList[i].getName()==content) {
+				if(customerList[i].getName().equals(content)) {
 					return customerList[i].getName();
 				}
-				if(customerList[i].getId()==content) {
+				if(customerList[i].getId().equals(content)) {
 					return customerList[i].getName();
 				}
-				if(customerList[i].getPhoneNumber()==content) {
+				if(customerList[i].getPhoneNumber().equals(content)) {
 					return customerList[i].getName();
 				}
 			}
@@ -215,7 +228,7 @@ public class rentalSystem {
 	public boolean verifyCustomerById(String ID) {
 		for(customer c:customerList) {
 			if(c!=null) {
-				if(c.getId()==ID) {
+				if(c.getId().equals(ID)) {
 					return true;
 				}
 			}
@@ -242,7 +255,7 @@ public class rentalSystem {
 				System.out.println(content + " is not in the car list");
 				break;
 				}
-			if(carList[i].getCarId()==content||carList[i].getCarName()==content) {
+			if(carList[i].getCarId().equals(content)||carList[i].getCarName().equals(content)) {
 				if(carList[i].getCustomerId()==null) {
 					carList[i].setCustomerId(customerID);
 					System.out.println(content + " is successfully rented");
@@ -260,11 +273,15 @@ public class rentalSystem {
 	 * Print car list
 	 */
 	public void printCarList() {
-		System.out.print("This is car list: ");
-		for(int i=0;i<carList.length;i++) {
-			if(carList[i]!=null)System.out.print(carList[i].getCarName() + " ");
-		}
+		if (carList.length == 0){System.out.print("Carlist is empty");}
+		else{
+			System.out.print("This is car list: ");
+			for(int i=0;i<carList.length;i++) {
+				if(carList[i]!=null)System.out.print(carList[i].getCarName() + " ");
+			}
 		System.out.println();
+		}
+		
 	}
 	/**
 	 * Print customer list
@@ -272,7 +289,7 @@ public class rentalSystem {
 	public void printCustomerList() {
 		System.out.print("This is customer list: ");
 		for(int i=0;i<customerList.length;i++) {
-			if(customerList[i]!=null)System.out.print(customerList[i].getName() + " ");
+			if(customerList[i]!=null)System.out.print("(" + customerList[i].getId() + " " + customerList[i].getName() + ") ");
 		}
 		System.out.println();
 	}
@@ -290,7 +307,7 @@ public class rentalSystem {
 				if((customerInfo==rentalBook.rentalBook[i][0]||customerInfo==rentalBook.rentalBook[i][1])&&(carInfo==rentalBook.rentalBook[i][2]||carInfo==rentalBook.rentalBook[i][3])) {
 					for(int j =0;j< carList.length;j++) {
 						if(carList[j]!=null) {
-							if(carList[j].getCarName()==carInfo||carList[j].getCarId()==carInfo) {
+							if(carList[j].getCarName().equals(carInfo)||carList[j].getCarId().equals(carInfo)) {
 								carList[j].setCustomerId(null);
 								records.addRecord(date, carList[j].getPrice());
 								break;

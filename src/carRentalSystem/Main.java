@@ -70,8 +70,7 @@ public class Main {
 				currentSystem.addCustomer(newcustomer);
 				System.out.print(newcustomer.getId() + " " + name + " is successfully added to the customer list\n");
 				System.out.println();
-				System.out.print(currentSystem.verifyCustomerById("111"));
-				System.out.println();
+
 
 			}
 			if (choice==3){
