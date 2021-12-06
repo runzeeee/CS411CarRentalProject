@@ -30,7 +30,7 @@ public class Main {
 			int choice = scan.nextInt();
 
 			System.out.println("\n");
-			if (choice==1){
+			if (choice == 1){
 				System.out.print("\nPlease enter the car's information:\n");
 				System.out.print("\nCarid:\n");
 				String carid = scan.next();
@@ -50,7 +50,7 @@ public class Main {
 				currentSystem.addCar(newcar);
 				System.out.print(carid + " " + carname + " is successfully added to the carlist\n");
 			}
-			if (choice==2){
+			if (choice == 2){
 				System.out.print("\nPlease enter the user's information:\n");
 				System.out.print("\nName:\n");
 				String name = scan.next();
@@ -73,14 +73,14 @@ public class Main {
 
 
 			}
-			if (choice==3){
+			if (choice == 3){
 				System.out.print("\nPlease enter the user's ID:\n");
 				String id = scan.next();
 				System.out.print("\nPlease enter the car you want to rent:\n");
 				String carname = scan.next();
 				currentSystem.rentACar(id, carname);
 			}
-			if (choice==4){
+			if (choice == 4){
 				System.out.print("\nPlease enter the user's ID:\n");
 				String id = scan.next();
 				System.out.print("\nPlease enter the car you want to return:\n");
@@ -90,28 +90,28 @@ public class Main {
 				currentSystem.returnCar(id, carname, returndate);
 				currentSystem.records.printRevenue();
 			}
-			if (choice==5){
+			if (choice == 5){
 				currentSystem.rentalBook.printRentalBook();
 			}
-			if (choice==6){
+			if (choice == 6){
 				currentSystem.printCarList();
 				System.out.println();
 			}
-			if (choice==7){
+			if (choice == 7){
 				currentSystem.printCustomerList();
 				System.out.println();
 			}
-			if (choice==8){
+			if (choice == 8){
 				System.out.println("Please enter the car ID:");
 				String id = scan.next();
 				currentSystem.delCar(id);
 			}
-			if (choice==9){
+			if (choice == 9){
 				System.out.println("Please enter the User ID:");
 				String id = scan.next();
 				currentSystem.delCustomer(id);
 			}
-			else if(choice==10){
+			else if(choice == 10){
 				System.out.println("Now the service will shut off");
 				break;
 			}
