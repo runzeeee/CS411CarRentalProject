@@ -306,12 +306,13 @@ public class rentalSystem {
 		if(customerInfo==null||carInfo==null) throw new IllegalArgumentException("input cannot be null");
 		for(int i=0;i<rentalBook.rentalBook.length;i++) {
 			if(rentalBook.rentalBook[i][0] != null || rentalBook.rentalBook[i][0].length() !=0) {
-				if((customerInfo==rentalBook.rentalBook[i][0]||customerInfo==rentalBook.rentalBook[i][1])&&(carInfo==rentalBook.rentalBook[i][2]||carInfo==rentalBook.rentalBook[i][3])) {
+				if((customerInfo.equals(rentalBook.rentalBook[i][0])||customerInfo.equals(rentalBook.rentalBook[i][1]))&&(carInfo.equals(rentalBook.rentalBook[i][2])||carInfo.equals(rentalBook.rentalBook[i][3]))) {
 					for(int j =0;j< carList.length;j++) {
 						if(carList[j]!=null) {
 							if(carList[j].getCarName().equals(carInfo)||carList[j].getCarId().equals(carInfo)) {
 								carList[j].setCustomerId(null);
 								records.addRecord(date, carList[j].getPrice());
+								
 								break;
 							}
 						}

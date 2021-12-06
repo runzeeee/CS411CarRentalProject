@@ -66,10 +66,11 @@ public class revenueSystem {
 	public void printRevenue() {
 		Set<String> keys = records.keySet();
 		for(String key: keys) {
-			System.out.print(key + ":  ");
+			System.out.print("Date:" + key + ":  ");
+			System.out.println();
 			String[] record = records.get(key);
 			for(int i=0;i<record.length;i++) {
-				if (record[i]!=null) System.out.print(record[i] + ", ");;
+				if (record[i]!=null) System.out.print("Revenue is:" + record[i] + ", ");;
 			}
 			System.out.println();
 		}
