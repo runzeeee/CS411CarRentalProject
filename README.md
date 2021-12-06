@@ -20,6 +20,8 @@ Our code requires customer computer has a software which can operate java file. 
 - link for Eclipse: https://www.eclipse.org/downloads/
 - link for VSCode: https://code.visualstudio.com/
 
+IMPORTANT: Be sure to run the Java file with the most recent JDK: https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+
 # 2. Running the code
 1. On GitHub.com, navigate to the main page of the repository.
 2. Above the list of files, click "Code".
