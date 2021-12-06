@@ -107,7 +107,7 @@ public class Main {
 				currentSystem.delCar(id);
 			}
 			if (choice==9){
-				System.out.println("lease enter the user ID:");
+				System.out.println("Please enter the user ID:");
 				String id = scan.next();
 				currentSystem.delCustomer(id);
 			}
